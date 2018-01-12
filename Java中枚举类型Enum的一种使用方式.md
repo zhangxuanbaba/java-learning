@@ -10,3 +10,4 @@
 
 ![Image text](http://mmbiz.qpic.cn/mmbiz_jpg/UtWdDgynLdb2whwib13JlP459iahavuDuzEialdl8Mub39olrF6TeDgkNuPxnumvmBAZ6JXTEDTFuyBfRRlAPMyicw/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1)
 
+版权声明：本文为本人原创和部分网上收集，对于网上收集部分除非确实无法确认，我都会注明作者和来源。部分文章推送时未能与原作者取得联系。若涉及版权问题，烦请原作者联系我，我会在24小时内删除处理，谢谢！^_^
