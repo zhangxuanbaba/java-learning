@@ -1,8 +1,6 @@
 枚举类定义如下：<br>
 
-![Image text]
-(http://mmbiz.qpic.cn/mmbiz_jpg/UtWdDgynLdb2whwib13JlP459iahavuDuzIxMPmeibB6xINx3kmib83GbAJBc4C6bwR0PpeiaL9LvibXL6XW8p7wibj4Q/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1)
-
+![Image text](http://mmbiz.qpic.cn/mmbiz_jpg/UtWdDgynLdb2whwib13JlP459iahavuDuzIxMPmeibB6xINx3kmib83GbAJBc4C6bwR0PpeiaL9LvibXL6XW8p7wibj4Q/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1)
 
 使用的方式如下：<br>
 
