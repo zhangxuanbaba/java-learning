@@ -73,3 +73,5 @@ append()方法进行拼接，效率是使用+号拼接方式的百倍甚至千�
 以上示例中，String.valueOf()直接调用了底层的Integer.toString()方法，不过其中会先判空；+”“由StringBuilder实现，先调用了append()方法，然后调用了toString()方法获取字符串；num.toString()直接调用了Integer.toString()方法，所以效率是:num.toString()方法最快，其次是String.valueOf(num)，最后是num+”“的方式。以下是结果截图:
 
 ![Image text](http://mmbiz.qpic.cn/mmbiz_png/UtWdDgynLdb7ANibg0YcEadOS1BIGCUn0kWMMhRwCt4qflLT2lECewraW0IuAGxZbvUhv6pp8e4vlK7wPiaicdNDA/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1)
+
+版权声明：本文为本人原创和部分网上收集，对于网上收集部分除非确实无法确认，我都会注明作者和来源。部分文章推送时未能与原作者取得联系。若涉及版权问题，烦请原作者联系我，我会在24小时内删除处理，谢谢！^_^
