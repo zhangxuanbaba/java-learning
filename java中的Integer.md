@@ -3,14 +3,14 @@
 如果你运行下面的代码
 
 
-Integer a = 1000, b = 1000;
-System.out.println(a == b);//1 Integer c = 100, d = 100;  
-System.out.println(c == d);//2 
-你会得到：
+        Integer a = 1000, b = 1000; <br>
+        System.out.println(a == b);//1 Integer c = 100, d = 100;  
+        System.out.println(c == d);//2 
+        你会得到：
 
 
-false
-true
+        false
+        true
 
 
 基本知识：我们知道，如果两个引用指向同一个对象，用==表示它们是相等的。如果两个引用指向不同的对象，用==表示它们是不相等的，即使它们的内容相同。
@@ -30,25 +30,25 @@ Integer i = Integer.valueOf(100);
 现在，如果我们去看valueOf()方法，我们可以看到：
 
 
-public static Integer valueOf(int i) {
-    if (i >= IntegerCache.low && i
-    return IntegerCache.cache[i + (-IntegerCache.low)];
-    return new Integer(i);
-}
+        public static Integer valueOf(int i) {
+            if (i >= IntegerCache.low && i
+            return IntegerCache.cache[i + (-IntegerCache.low)];
+            return new Integer(i);
+        }
 
 如果值的范围在-128到127之间，它就从高速缓存返回实例。
 
 所以…
 
 
-Integer c = 100, d = 100; 
+        Integer c = 100, d = 100; 
 
 指向了同一个对象。
 
 这就是为什么我们写：
 
 
-System.out.println(c == d); 
+        System.out.println(c == d); 
 
 
 我们可以得到true。
@@ -62,14 +62,14 @@ System.out.println(c == d);
 运行下面的代码，享受它的魅力吧
 
 
-public static void main(String[] args) throws NoSuchFieldException, 
-IllegalAccessException {
-    Class cache = Integer.class.getDeclaredClasses()[0]; //1 
-    Field myCache = cache.getDeclaredField("cache"); //2 
-    myCache.setAccessible(true);//3 
-    Integer[] newCache = (Integer[]) myCache.get(cache); //4 
-    newCache[132] = newCache[133]; //5 
-    int a = 2;
-    int b = a + a;
-    System.out.printf("%d + %d = %d", a, a, b); // 
-} 
+        public static void main(String[] args) throws NoSuchFieldException, 
+        IllegalAccessException {
+            Class cache = Integer.class.getDeclaredClasses()[0]; //1 
+            Field myCache = cache.getDeclaredField("cache"); //2 
+            myCache.setAccessible(true);//3 
+            Integer[] newCache = (Integer[]) myCache.get(cache); //4 
+            newCache[132] = newCache[133]; //5 
+            int a = 2;
+            int b = a + a;
+            System.out.printf("%d + %d = %d", a, a, b); // 
+        } 
