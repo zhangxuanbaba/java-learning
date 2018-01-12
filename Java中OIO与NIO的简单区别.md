@@ -1,14 +1,14 @@
 1、OIO中，每个线程只能处理一个channel（同步的，该线程和该channel绑定）。 
-线程发起IO请求，不管内核是否准备好IO操作，从发起请求起，线程一直阻塞，直到操作完成,如图： 
+线程发起IO请求，不管内核是否准备好IO操作，从发起请求起，线程一直阻塞，直到操作完成,如图： <br>
 ![Image text](http://mmbiz.qpic.cn/mmbiz_png/UtWdDgynLdaQicg4Ka7MGlib6lBsxAKzibpv5KfibdST7TIGweSibyQCkXSBqSJPIGGYBtwnsqAQn6906Fu0mnzG3Zg/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1)
 
 NIO中，每个线程可以处理多个channel（异步）。
 
-线程发起IO请求，立即返回；内核在做好IO操作的准备之后，通过调用注册的回调函数通知线程做IO操作，线程开始阻塞，直到操作完成 
+线程发起IO请求，立即返回；内核在做好IO操作的准备之后，通过调用注册的回调函数通知线程做IO操作，线程开始阻塞，直到操作完成 <br>
 ![Image text](http://mmbiz.qpic.cn/mmbiz_png/UtWdDgynLdaQicg4Ka7MGlib6lBsxAKzibpQN36aiboT8nibSnN6DrmiabBCU342HSp38Lf8WsqrjAJB7SIBPYibvJKUA/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1)
 
 AIO中，线程发起IO请求，立即返回；内存做好IO操作的准备之后，做IO操作，直到操作完成或者失败，通过调用注册的回调函数通知线程做IO操作完成或者失败 
-
+<br>
 ![Image text](http://mmbiz.qpic.cn/mmbiz_png/UtWdDgynLdaQicg4Ka7MGlib6lBsxAKzibp9SDfkCcRz1icdV9V895JUnjZv2o8Yyk8DbfzG4oDkvPcWm9hQtW4gCg/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1)
 
 那么OIO如何处理海量连接请求呢？ 
